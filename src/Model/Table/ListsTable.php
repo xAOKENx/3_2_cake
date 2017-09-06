@@ -7,8 +7,8 @@ class ListsTable extends Table
 {
   public function initialize(array $config)
   {
-    $this->addBehavior('Timestamp');
-    $this->hasOne('Masters');
-  }
+    $this->belongsTo('masters')
+         ->setForeignKey('div_id');
+    }
 
 }

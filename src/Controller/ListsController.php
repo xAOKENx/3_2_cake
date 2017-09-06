@@ -10,6 +10,8 @@
  {
    public function index()
    {
+     $master = $this->Lists->find('all')->contain('Masters');
+     $this->set('lists',$master);
      $list = $this->Lists->find('all');
      // $this->set('lists', $lists);
      $this->set('lists', $list);

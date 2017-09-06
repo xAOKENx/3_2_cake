@@ -25,7 +25,7 @@
           <?php else: ?>
             <span>女性</span><br>
           <?php endif; ?>
-    部署：<?= h($list->division); ?><br>
+    部署：<?= $list->master ? $list->master->div_name: '-' ?><br>
     <?=
         $this->Form->postLink(
           '[x]',
